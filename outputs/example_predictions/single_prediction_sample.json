@@ -1,0 +1,86 @@
+{
+  "sample_path": "test\\fresh\\f (10).png",
+  "ground_truth": "fresh",
+  "models_predictions": {
+    "random_forest": {
+      "model_key": "random_forest",
+      "predicted_class": "fresh",
+      "confidence": 1.0,
+      "score_interpretation": "Softmax model score (uncalibrated neural network output)",
+      "class_probabilities": {
+        "blackspot": 0.0,
+        "canker": 0.0,
+        "fresh": 1.0,
+        "grenning": 0.0
+      },
+      "model_latency_ms": 26.721,
+      "total_latency_ms": 43.301,
+      "original_dimensions": [
+        328,
+        296
+      ],
+      "ground_truth": "fresh",
+      "is_correct": true
+    },
+    "mobilenet_v2": {
+      "model_key": "mobilenet_v2",
+      "predicted_class": "fresh",
+      "confidence": 0.9998,
+      "score_interpretation": "Softmax model score (uncalibrated neural network output)",
+      "class_probabilities": {
+        "blackspot": 0.0,
+        "canker": 0.0002,
+        "fresh": 0.9998,
+        "grenning": 0.0
+      },
+      "model_latency_ms": 395.412,
+      "total_latency_ms": 400.935,
+      "original_dimensions": [
+        328,
+        296
+      ],
+      "ground_truth": "fresh",
+      "is_correct": true
+    },
+    "segmentation_svm": {
+      "model_key": "segmentation_svm",
+      "predicted_class": "fresh",
+      "confidence": 0.9955,
+      "score_interpretation": "Empirical posterior probability",
+      "class_probabilities": {
+        "blackspot": 0.0007,
+        "canker": 0.0015,
+        "fresh": 0.9955,
+        "grenning": 0.0023
+      },
+      "model_latency_ms": 3.899,
+      "total_latency_ms": 113.734,
+      "original_dimensions": [
+        328,
+        296
+      ],
+      "ground_truth": "fresh",
+      "is_correct": true
+    },
+    "custom_cnn": {
+      "model_key": "custom_cnn",
+      "predicted_class": "fresh",
+      "confidence": 1.0,
+      "score_interpretation": "Softmax model score (uncalibrated neural network output)",
+      "class_probabilities": {
+        "blackspot": 0.0,
+        "canker": 0.0,
+        "fresh": 1.0,
+        "grenning": 0.0
+      },
+      "model_latency_ms": 45.131,
+      "total_latency_ms": 49.693,
+      "original_dimensions": [
+        328,
+        296
+      ],
+      "ground_truth": "fresh",
+      "is_correct": true
+    }
+  }
+}

@@ -1,0 +1,5 @@
+Approach,Model Paradigm,Accuracy,Macro Precision,Macro Recall,Macro F1-Score,End-to-End Latency (ms),Model-Only Latency (ms),Model Size (MB),Test Image Count
+Approach 1: HSV Histogram + Random Forest,Classical CV (HSV 512-D) + Random Forest,96.97%,97.00%,96.59%,96.57%,37.03,0.62,0.37,99
+Approach 2: MobileNetV2 Transfer Learning,Deep Learning: Pretrained MobileNetV2 + Fine-Tuning,94.95%,94.81%,95.08%,94.81%,183.27,31.04,20.54,99
+Approach 3: Segmentation + HOG/LBP/Color + SVM,Classical CV: GrabCut + HOG/LBP/HSV + RBF-SVM,87.88%,86.46%,86.36%,86.34%,55.00,0.45,1.73,99
+Approach 4: Custom CNN From Scratch,Deep Learning: Compact Keras CNN (Conv2D+Dropout+Flatten),97.98%,97.92%,97.73%,97.72%,36.63,5.57,49.13,99

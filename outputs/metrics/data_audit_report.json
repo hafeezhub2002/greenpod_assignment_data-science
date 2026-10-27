@@ -1,0 +1,80 @@
+{
+  "dataset_validation_verdict": {
+    "critical_finding": "DATASET SUBJECT MISMATCH EXPLICITLY FLAGGED",
+    "assignment_objective": "Avocado Ripening Stage Detection (unripe, ripe, overripe)",
+    "actual_dataset_subject": "Citrus / Orange Condition (Disease & Quality)",
+    "actual_classes_discovered": [
+      "blackspot",
+      "canker",
+      "fresh",
+      "grenning"
+    ],
+    "interpretation": "The provided Greenpod Labs dataset 'Orange Dataset.zip' contains citrus/orange images categorized into 4 disease and condition classes: ['blackspot', 'canker', 'fresh', 'grenning']. Per Master Prompt Critical Dataset Rule, we do NOT hallucinate or mislabel these as avocado stages. Instead, we dynamically infer labels, preserve exact visual ground truth, and build the 4-approach computer vision pipeline to rigorously benchmark performance on the actual data while documenting the discrepancy for production deployment."
+  },
+  "splits": {
+    "train": {
+      "total_images": 991,
+      "class_counts": {
+        "grenning": 347,
+        "fresh": 281,
+        "blackspot": 184,
+        "canker": 179
+      },
+      "corrupted_count": 0,
+      "exact_duplicates": 0,
+      "perceptual_duplicates": 3,
+      "dimension_stats": {
+        "min_width": 144,
+        "median_width": 800.0,
+        "max_width": 800,
+        "min_height": 138,
+        "median_height": 800.0,
+        "max_height": 800,
+        "channels_detected": [
+          3
+        ]
+      }
+    },
+    "test": {
+      "total_images": 99,
+      "class_counts": {
+        "fresh": 33,
+        "blackspot": 22,
+        "canker": 22,
+        "grenning": 22
+      },
+      "corrupted_count": 0,
+      "exact_duplicates": 0,
+      "perceptual_duplicates": 0,
+      "dimension_stats": {
+        "min_width": 178,
+        "median_width": 800.0,
+        "max_width": 800,
+        "min_height": 144,
+        "median_height": 800.0,
+        "max_height": 800,
+        "channels_detected": [
+          3
+        ]
+      }
+    }
+  },
+  "data_leakage_check": {
+    "cross_split_exact_duplicates": 0,
+    "details": []
+  },
+  "class_imbalance_analysis": {
+    "train_class_balance": {
+      "grenning": 0.3502,
+      "fresh": 0.2836,
+      "blackspot": 0.1857,
+      "canker": 0.1806
+    },
+    "test_class_balance": {
+      "fresh": 0.3333,
+      "blackspot": 0.2222,
+      "canker": 0.2222,
+      "grenning": 0.2222
+    }
+  }
+}
